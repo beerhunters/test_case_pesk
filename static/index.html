@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auth Client</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .error {
+            color: red;
+        }
+        .success {
+            color: green;
+        }
+        #contentMessage pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required value="user1">
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required value="pass1">
+            </div>
+            <button type="submit">Login</button>
+        </form>
+        <p id="loginMessage" class="error"></p>
+    </div>
+
+    <div class="section">
+        <h2>Content</h2>
+        <button id="getContent">Get Content</button>
+        <p id="contentMessage"></p>
+    </div>
+
+    <div class="section">
+        <h2>Logout</h2>
+        <button id="logoutButton" disabled>Logout</button>
+        <p id="logoutMessage"></p>
+    </div>
+
+    <div class="section">
+        <h2>Current Token</h2>
+        <textarea id="tokenDisplay" rows="5" cols="60" readonly style="font-size: 0.8em;"></textarea>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
